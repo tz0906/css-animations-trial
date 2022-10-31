@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(32, 32, 59, 0.958);
+}
+
+:root{
+    --color-1: brown;
+    --color-2: white;
+}
+.moons{
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(40deg, rgb(124, 111, 111) 10%, rgb(79, 74, 74) 50%, rgb(161, 156, 156));
+    width: 200px;
+    height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    top: 5%;
+    left: 25%;
+    box-shadow: 1px 2px 1px 2px rgb(105, 101, 101);
+    transform-origin: center;
+    animation-name: moon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0ms;
+    z-index: 2;
+    opacity: 90%;
+}
+@keyframes moon{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.ghost:hover{
+    transform: scale(1.2);
+    cursor: not-allowed;
+}
+
+
+.ghost{
+    position: absolute;
+    z-index: 3;
+    height: 30%;
+    width: 30%;
+    background: var(--color-2);
+    top: 27%;
+    left: 33%;
+    border-radius: 50% 50% 20% 20%;
+}
+.eyes{
+    border-radius: 50%;
+    color: black;
+    z-index: 4;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+.eyes.left{
+
+}
+.eyes.right{
+
+}
+
+
+
